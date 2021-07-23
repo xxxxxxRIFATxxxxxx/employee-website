@@ -1,4 +1,8 @@
 /* Common CSS */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
 a {
     text-decoration: none;
 }
@@ -40,8 +44,8 @@ input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
 .uneditable-input:focus {   
-  border-color: rgb(83, 45, 120, 0.6);;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgb(83, 45, 120, 0.8);;
+  border-color: rgb(83, 45, 120, 0.6);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgb(83, 45, 120, 0.8);
   outline: 0 none;
 }
 
