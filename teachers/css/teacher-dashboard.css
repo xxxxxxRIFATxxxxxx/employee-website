@@ -1,0 +1,17 @@
+label, .form-control {
+    font-size: 13px;
+}
+
+table {
+    font-size: 0.9rem;
+}
+
+table th {
+    border-bottom: none;
+}
+
+@media only screen and (max-width: 992px) {
+    .download-btn {
+        width: 100%;
+    }
+}
