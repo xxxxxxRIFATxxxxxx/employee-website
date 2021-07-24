@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Title -->
-    <title>Teacher Pupils</title>
+    <title>Teacher Connect 2</title>
 
     <!-- Fav Icon -->
     <link rel="icon" href="../images/favicon.png" type="image/gif" />
@@ -64,7 +64,7 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="pupils.html">Pupils</a>
+                <a class="nav-link" href="pupils.html">Pupils</a>
             </li>
 
             <li class="nav-item dropdown">
@@ -88,7 +88,7 @@
             </li>
 
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="" role="button"
+                <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="" role="button"
                     aria-expanded="false">Connect</a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="connect.html">Connect</a></li>
@@ -166,8 +166,8 @@
             <!-- Table and Chart -->
             <div class="row mt-4">
                 <!-- Table -->
-                <div class="col-12 co-sm-12 col-md-12 col-lg-7">
-                    <div class="d-flex align-items-center justify-content-between">
+                <div class="col-12">
+                    <div class="pb-2 d-flex align-items-center justify-content-between">
                         <div class="d-flex align-items-center align-items-center justify-conten-between">
                             <h6 class="me-2">Class:</h6>
                             <h6>Class 2</h6>
@@ -175,7 +175,12 @@
 
                         <div class="d-flex align-items-center justify-conten-between">
                             <h6 class="me-2">Pupil:</h6>
-                            <h6>Pupil Name</h6>
+                            <h6>Pupil Name 3</h6>
+                        </div>
+
+                        <div class="d-flex align-items-center justify-conten-between">
+                            <h6 class="me-2">Strand:</h6>
+                            <h6>Connect</h6>
                         </div>
                     </div>
 
@@ -192,7 +197,7 @@
                         <tbody>
                             <tr>
                                 <td class="border" scope="row">
-                                    <a href="#">Proud</a>
+                                    <a href="#">Quest 1</a>
                                 </td>
                                 <td class="border">86% (+6%)</td>
                                 <td class="border">84% (+4%)</td>
@@ -201,7 +206,7 @@
 
                             <tr>
                                 <td class="border" scope="row">
-                                    <a href="#">Connect</a>
+                                    <a href="#">Quest 2</a>
                                 </td>
                                 <td class="border">86% (+6%)</td>
                                 <td class="border">84% (+4%)</td>
@@ -210,7 +215,7 @@
 
                             <tr>
                                 <td class="border" scope="row">
-                                    <a href="#">Take Notice</a>
+                                    <a href="#">Quest 3</a>
                                 </td>
                                 <td class="border">86% (+6%)</td>
                                 <td class="border">84% (+4%)</td>
@@ -219,7 +224,7 @@
 
                             <tr>
                                 <td class="border" scope="row">
-                                    <a href="#">Be Active</a>
+                                    <a href="#">Quest 4</a>
                                 </td>
                                 <td class="border">86% (+6%)</td>
                                 <td class="border">84% (+4%)</td>
@@ -228,25 +233,7 @@
 
                             <tr>
                                 <td class="border" scope="row">
-                                    <a href="#">Learning</a>
-                                </td>
-                                <td class="border">86% (+6%)</td>
-                                <td class="border">84% (+4%)</td>
-                                <td class="border">80%</td>
-                            </tr>
-
-                            <tr>
-                                <td class="border" scope="row">
-                                    <a href="#">Give</a>
-                                </td>
-                                <td class="border">86% (+6%)</td>
-                                <td class="border">84% (+4%)</td>
-                                <td class="border">80%</td>
-                            </tr>
-
-                            <tr>
-                                <td class="border" scope="row">
-                                    <a href="#">Wellbeing</a>
+                                    <a href="#">Quest 5</a>
                                 </td>
                                 <td class="border">86% (+6%)</td>
                                 <td class="border">84% (+4%)</td>
@@ -255,13 +242,7 @@
                         </tbody>
                     </table>
                 </div>
-
-                <!-- Chart -->
-                <div class="col-12 co-sm-12 col-md-12 col-lg-5">
-                    <canvas id="myChart" width="400" height="400"></canvas>
-                </div>
             </div>
-
         </div>
     </main>
 
@@ -272,44 +253,6 @@
 
     <!-- Javascript Chart -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.1/dist/chart.min.js"></script>
-
-    <script>
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['School Avg', 'Class 1', 'Class 2', 'Class 3', 'Class 4', 'Class 5', 'Class 6'],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-    </script>
 </body>
 
 </html>

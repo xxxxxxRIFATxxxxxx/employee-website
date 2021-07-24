@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Title -->
-    <title>Teacher Responses</title>
+    <title>Teacher Class Admin</title>
 
     <!-- Fav Icon -->
     <link rel="icon" href="../images/favicon.png" type="image/gif" />
@@ -51,7 +51,7 @@
 
         <ul class="nav nav-tabs">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="" role="button"
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="" role="button"
                     aria-expanded="false">Responses</a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="responses.html">Responses</a></li>
@@ -60,7 +60,7 @@
             </li>
 
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="" role="button"
+                <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="" role="button"
                     aria-expanded="false">Class Admin</a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="class-admin.html">Class Admin</a></li>
@@ -85,12 +85,21 @@
         <div class="border p-3">
             <!-- Main Content Header -->
             <div>
+                <h6 class="pb-2">School Name</h6>
                 <div class="row gy-1">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-1 mt-2">
-                        <button class="btn btn-sm btn-success download-btn">Download</button>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 mt-2">
+                        <button class="btn btn-sm btn-success w-100">Create Class</button>
                     </div>
 
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-1 mt-2">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 mt-2">
+                        <button class="btn btn-sm btn-success w-100">Delete Class</button>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 mt-2">
+                        <button class="btn btn-sm btn-success w-100">Download</button>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 mt-2">
                         <button class="btn btn-sm btn-success w-100">Print</button>
                     </div>
                 </div>
@@ -99,13 +108,14 @@
             <!-- Table and Chart -->
             <div class="row mt-4">
                 <!-- Table -->
-                <div class="col-12 co-sm-12 col-md-12 col-lg-7">
+                <div class="col-12 co-sm-12 col-md-12 col-lg-12">
                     <h6 class="pb-2">Responses</h6>
                     <table class="table table-striped table-hover border">
                         <thead>
                             <tr>
-                                <th class="border" scope="col"></th>
-                                <th class="border" scope="col">Number of students that have responded</th>
+                                <th class="border" scope="col">CLASSES</th>
+                                <th class="border" scope="col">Number of Students</th>
+                                <th class="border" scope="col">Number of Teachers</th>
                             </tr>
                         </thead>
 
@@ -114,53 +124,53 @@
                                 <td class="border" scope="row">
                                     <a href="#">Class 1</a>
                                 </td>
-                                <td class="border">28</td>
+                                <td class="border">30</td>
+                                <td class="border">2</td>
                             </tr>
 
                             <tr>
                                 <td class="border" scope="row">
                                     <a href="#">Class 2</a>
                                 </td>
-                                <td class="border">28</td>
+                                <td class="border">30</td>
+                                <td class="border">2</td>
                             </tr>
 
                             <tr>
                                 <td class="border" scope="row">
                                     <a href="#">Class 3</a>
                                 </td>
-                                <td class="border">28</td>
+                                <td class="border">30</td>
+                                <td class="border">2</td>
                             </tr>
 
                             <tr>
                                 <td class="border" scope="row">
                                     <a href="#">Class 4</a>
                                 </td>
-                                <td class="border">28</td>
+                                <td class="border">30</td>
+                                <td class="border">2</td>
                             </tr>
 
                             <tr>
                                 <td class="border" scope="row">
                                     <a href="#">Class 5</a>
                                 </td>
-                                <td class="border">28</td>
+                                <td class="border">30</td>
+                                <td class="border">2</td>
                             </tr>
 
                             <tr>
                                 <td class="border" scope="row">
                                     <a href="#">Class 6</a>
                                 </td>
-                                <td class="border">28</td>
+                                <td class="border">30</td>
+                                <td class="border">2</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-
-                <!-- Chart -->
-                <div class="col-12 co-sm-12 col-md-12 col-lg-5">
-                    <canvas id="myChart" width="400" height="400"></canvas>
-                </div>
             </div>
-
         </div>
     </main>
 
@@ -171,45 +181,6 @@
 
     <!-- Javascript Chart -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.1/dist/chart.min.js"></script>
-
-    <script>
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['School Avg', 'Class 1', 'Class 2', 'Class 3', 'Class 4', 'Class 5', 'Class 6'],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-    </script>
-
 </body>
 
 </html>
