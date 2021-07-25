@@ -114,42 +114,42 @@
                                 <td class="border" scope="row">
                                     <a href="#">Class 1</a>
                                 </td>
-                                <td class="border">28</td>
+                                <td class="border" id="class-1-std">28</td>
                             </tr>
 
                             <tr>
                                 <td class="border" scope="row">
                                     <a href="#">Class 2</a>
                                 </td>
-                                <td class="border">28</td>
+                                <td class="border" id="class-2-std">24</td>
                             </tr>
 
                             <tr>
                                 <td class="border" scope="row">
                                     <a href="#">Class 3</a>
                                 </td>
-                                <td class="border">28</td>
+                                <td class="border" id="class-3-std">5</td>
                             </tr>
 
                             <tr>
                                 <td class="border" scope="row">
                                     <a href="#">Class 4</a>
                                 </td>
-                                <td class="border">28</td>
+                                <td class="border" id="class-4-std">28</td>
                             </tr>
 
                             <tr>
                                 <td class="border" scope="row">
                                     <a href="#">Class 5</a>
                                 </td>
-                                <td class="border">28</td>
+                                <td class="border" id="class-5-std">31</td>
                             </tr>
 
                             <tr>
                                 <td class="border" scope="row">
                                     <a href="#">Class 6</a>
                                 </td>
-                                <td class="border">28</td>
+                                <td class="border" id="class-6-std">30</td>
                             </tr>
                         </tbody>
                     </table>
@@ -173,14 +173,21 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.1/dist/chart.min.js"></script>
 
     <script>
+        const class1Std = document.getElementById("class-1-std").innerText;
+        const class2Std = document.getElementById("class-2-std").innerText;
+        const class3Std = document.getElementById("class-3-std").innerText;
+        const class4Std = document.getElementById("class-4-std").innerText;
+        const class5Std = document.getElementById("class-5-std").innerText;
+        const class6Std = document.getElementById("class-6-std").innerText;
+
         var ctx = document.getElementById('myChart').getContext('2d');
         var myChart = new Chart(ctx, {
-            type: 'bar',
+            type: 'pie',
             data: {
-                labels: ['School Avg', 'Class 1', 'Class 2', 'Class 3', 'Class 4', 'Class 5', 'Class 6'],
+                labels: ['Class 1', 'Class 2', 'Class 3', 'Class 4', 'Class 5', 'Class 6'],
                 datasets: [{
                     label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
+                    data: [class1Std, class2Std, class3Std, class4Std, class5Std, class6Std],
                     backgroundColor: [
                         'rgba(255, 99, 132, 1)',
                         'rgba(54, 162, 235, 1)',

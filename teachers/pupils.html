@@ -25,6 +25,12 @@
         href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
         rel="stylesheet">
 
+    <!-- Morris Chart -->
+    <link rel="stylesheet" href="https://www.cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -164,9 +170,9 @@
             </div>
 
             <!-- Table and Chart -->
-            <div class="row mt-4">
+            <div class="row mt-4 gy-2">
                 <!-- Table -->
-                <div class="col-12 co-sm-12 col-md-12 col-lg-7">
+                <div class="col-12 co-sm-12 col-md-12 col-lg-12">
                     <div class="d-flex align-items-center justify-content-between">
                         <div class="d-flex align-items-center align-items-center justify-conten-between">
                             <h6 class="me-2">Class:</h6>
@@ -203,62 +209,80 @@
                                 <td class="border" scope="row">
                                     <a href="#">Connect</a>
                                 </td>
-                                <td class="border">86% (+6%)</td>
-                                <td class="border">84% (+4%)</td>
-                                <td class="border">80%</td>
+                                <td class="border" id="connect-start-end">3.4</td>
+                                <td class="border" id="connect-school-year">3.2</td>
+                                <td class="border" id="connect-alltime">3.1</td>
                             </tr>
 
                             <tr>
                                 <td class="border" scope="row">
                                     <a href="#">Take Notice</a>
                                 </td>
-                                <td class="border">86% (+6%)</td>
-                                <td class="border">84% (+4%)</td>
-                                <td class="border">80%</td>
+                                <td class="border" id="take-notice-start-end">3.2</td>
+                                <td class="border" id="take-notice-school-year">3.6</td>
+                                <td class="border" id="take-notice-alltime">3.1</td>
                             </tr>
 
                             <tr>
                                 <td class="border" scope="row">
                                     <a href="#">Be Active</a>
                                 </td>
-                                <td class="border">86% (+6%)</td>
-                                <td class="border">84% (+4%)</td>
-                                <td class="border">80%</td>
+                                <td class="border" id="be-active-start-end">3.6</td>
+                                <td class="border" id="be-active-school-year">3.2</td>
+                                <td class="border" id="be-active-alltime">2.9</td>
                             </tr>
 
                             <tr>
                                 <td class="border" scope="row">
                                     <a href="#">Learning</a>
                                 </td>
-                                <td class="border">86% (+6%)</td>
-                                <td class="border">84% (+4%)</td>
-                                <td class="border">80%</td>
+                                <td class="border" id="learning-start-end">3.6</td>
+                                <td class="border" id="learning-school-year">3.2</td>
+                                <td class="border" id="learning-alltime">2.9</td>
                             </tr>
 
                             <tr>
                                 <td class="border" scope="row">
                                     <a href="#">Give</a>
                                 </td>
-                                <td class="border">86% (+6%)</td>
-                                <td class="border">84% (+4%)</td>
-                                <td class="border">80%</td>
+                                <td class="border" id="give-start-end">3.2</td>
+                                <td class="border" id="give-school-year">3.2</td>
+                                <td class="border" id="give-alltime">2.8</td>
                             </tr>
 
                             <tr>
                                 <td class="border" scope="row">
                                     <a href="#">Wellbeing</a>
                                 </td>
-                                <td class="border">86% (+6%)</td>
-                                <td class="border">84% (+4%)</td>
-                                <td class="border">80%</td>
+                                <td class="border" id="wellbeing-start-end">3.5</td>
+                                <td class="border" id="wellbeing-school-year">3.6</td>
+                                <td class="border" id="wellbeing-alltime">2.5</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
                 <!-- Chart -->
-                <div class="col-12 co-sm-12 col-md-12 col-lg-5">
-                    <canvas id="myChart" width="400" height="400"></canvas>
+                <div class="col-12 co-sm-12 col-md-12 col-lg-12">
+                    <div id="bar-chart"></div>
+                </div>
+
+                <div class="px-5 d-flex flex-column flex-sm-column flex-md-row justify-content-between">
+                    <div class="d-flex align-items-center mb-2">
+                        <span class="material-icons" style="color: #0B62A4;">
+                            stop
+                        </span>
+
+                        <span>Start Date - End Date</span>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <span class="material-icons" style="color: #4DA74D;">
+                            stop
+                        </span>
+
+                        <span>All Time</span>
+                    </div>
                 </div>
             </div>
 
@@ -270,45 +294,59 @@
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>
 
-    <!-- Javascript Chart -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.1/dist/chart.min.js"></script>
-
     <script>
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['School Avg', 'Class 1', 'Class 2', 'Class 3', 'Class 4', 'Class 5', 'Class 6'],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
+        const connectStartEnd = document.getElementById("connect-start-end").innerText;
+        const connectSchoolYear = document.getElementById("connect-school-year").innerText;
+        const connectAlltime = document.getElementById("connect-alltime").innerText;
+
+        const takeNoticeStartEnd = document.getElementById("take-notice-start-end").innerText;
+        const takeNoticeSchoolYear = document.getElementById("take-notice-school-year").innerText;
+        const takeNoticeAlltime = document.getElementById("take-notice-alltime").innerText;
+
+        const beActiveStartEnd = document.getElementById("be-active-start-end").innerText;
+        const beActiveSchoolYear = document.getElementById("be-active-school-year").innerText;
+        const beActiveAlltime = document.getElementById("be-active-alltime").innerText;
+
+        const learningStartEnd = document.getElementById("learning-start-end").innerText;
+        const learningSchoolYear = document.getElementById("learning-school-year").innerText;
+        const learningAlltime = document.getElementById("learning-alltime").innerText;
+
+        const giveStartEnd = document.getElementById("give-start-end").innerText;
+        const giveSchoolYear = document.getElementById("give-school-year").innerText;
+        const giveAlltime = document.getElementById("give-alltime").innerText;
+
+        const wellbeingStartEnd = document.getElementById("wellbeing-start-end").innerText;
+        const wellbeingSchoolYear = document.getElementById("wellbeing-school-year").innerText;
+        const wellbeingAlltime = document.getElementById("wellbeing-alltime").innerText;
+
+        $(document).ready(function () {
+            barChart();
+
+            $(window).resize(function () {
+                window.barChart.redraw();
+            });
         });
+
+        function barChart() {
+            window.barChart = Morris.Bar({
+                element: 'bar-chart',
+                data: [
+                    { y: 'Connect', a: connectStartEnd, c: connectAlltime },
+                    { y: 'Take Notice', a: takeNoticeStartEnd, c: takeNoticeAlltime },
+                    { y: 'Be Active', a: beActiveStartEnd, c: beActiveAlltime },
+                    { y: 'Learning', a: learningStartEnd, c: learningAlltime },
+                    { y: 'Give', a: giveStartEnd, c: giveAlltime },
+                    { y: 'Wellbeing', a: wellbeingStartEnd, c: wellbeingAlltime }
+                ],
+                xkey: 'y',
+                ykeys: ['a', 'c'],
+                labels: ['Start Date - End Date', 'All Time'],
+                lineColors: ['#1e88e5', '#ff3321'],
+                lineWidth: '3px',
+                resize: true,
+                redraw: true
+            });
+        }
     </script>
 </body>
 
