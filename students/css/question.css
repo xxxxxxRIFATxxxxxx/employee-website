@@ -1,7 +1,95 @@
-.margin-top {
-    margin-top: 180px;
+body {
+    background-image: url("../images/library.jpg");
+    background-repeat: no-repeat;
+    background-position:50% 50%;
 }
 
-.question-2, .question-3, .question-4, .question-5, .submit {
+label.radio {
+    cursor: pointer
+}
+
+label.radio input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    pointer-events: none
+}
+
+label.radio span {
+    padding: 4px 0px;
+    border: 1px solid red;
+    display: inline-block;
+    color: red;
+    width: 100px;
+    text-align: center;
+    border-radius: 3px;
+    margin-top: 7px;
+    text-transform: uppercase
+}
+
+label.radio input:checked + span {
+    border-color: red;
+    background-color: red;
+    color: #fff;
+}
+
+.ans {
+    margin-left: 36px!important;
+}
+
+.btn:focus {
+    outline: 0!important;
+    box-shadow: none!important;
+}
+
+.btn:active {
+    outline: 0!important;
+    box-shadow: none!important
+}
+
+.question-2, .question-3, .question-4, .question-5 {
     display: none;
+}
+
+@media only screen and (max-width: 576px) {
+    .question-5 span {
+        width: 100% !important;
+        padding: 20px !important;
+    }
+
+    .question-1 .ans, .question-2 .ans, .question-3 .ans, .question-4 .ans, .question-5 .ans {
+        margin: 0 !important;
+    }
+
+    .question-1 .question-title, .question-2 .question-title, .question-3 .question-title, .question-4 .question-title, .question-5 .question-title {
+        margin: 0 !important;
+    }
+
+    .question-4 span {
+        width: 100% !important;
+        padding: 10px 60px !important;
+    }
+
+    .question-3 label {
+        width: 100% !important;
+        padding: 10px 60px !important;
+    }
+
+    .question-1 .form-select {
+        width: 100% !important;
+    }
+
+    .question-2 .form-control {
+        width: 100% !important;
+        margin-right: 0 !important;
+    }
+
+    .ans-container {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
 }

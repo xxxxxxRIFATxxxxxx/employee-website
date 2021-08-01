@@ -34,152 +34,278 @@
     <link rel="stylesheet" href="css/question.css">
 </head>
 
-<body class="silver-bg">
+<body>
     <!-- Main -->
     <main>
         <!-- question-1 -->
-        <div class="question-1 w-75 mx-auto margin-top">
-            <h1 class="display-1 text-center">What class are you in?</h1>
-            <select class="form-select form-select-lg my-4 w-50 mx-auto" aria-label=".form-select-lg example">
-                <option selected>Select Class</option>
-                <option value="Class-1">Class 1</option>
-                <option value="Class-2">Class 2</option>
-                <option value="Class-3">Class 3</option>
-                <option value="Class-4">Class 4</option>
-                <option value="Class-5">Class 5</option>
-                <option value="Class-6">Class 6</option>
-                <option value="Class-7">Class 7</option>
-                <option value="Class-8">Class 8</option>
-                <option value="Class-9">Class 9</option>
-            </select>
+        <div class="question-1 container mt-5">
+            <div class="d-flex justify-content-center row">
+                <div class="col-md-10 col-lg-10">
+                    <div class="border">
+                        <div class="question bg-white p-3 border-bottom">
+                            <div class="d-flex flex-row justify-content-between align-items-center mcq">
+                                <h4>MCQ Quiz</h4><span>(1 of 5)</span>
+                            </div>
+                        </div>
 
-            <div class="text-center">
-                <button class="mt-4 btn btn-primary btn-lg question-1-next">Next</button>
+                        <div class="question bg-white p-3 border-bottom">
+                            <div class="d-flex flex-row align-items-center question-title ms-4">
+                                <h3 class="text-danger">Q.</h3>
+                                <h5 class="mt-1 ms-2">
+                                    What class are you in?
+                                </h5>
+                            </div>
+
+                            <div class="ans">
+                                <select class="form-select my-4 w-50 me-auto">
+                                    <option selected>Select Class</option>
+                                    <option value="Class-1">Class 1</option>
+                                    <option value="Class-2">Class 2</option>
+                                    <option value="Class-3">Class 3</option>
+                                    <option value="Class-4">Class 4</option>
+                                    <option value="Class-5">Class 5</option>
+                                    <option value="Class-6">Class 6</option>
+                                    <option value="Class-7">Class 7</option>
+                                    <option value="Class-8">Class 8</option>
+                                    <option value="Class-9">Class 9</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row justify-content-end align-items-center p-3 bg-white">
+                            <button class="btn btn-primary border-success align-items-center btn-success" type="button"
+                                id="q1-next">Next<i class="fa fa-angle-right ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- question-2 -->
-        <div class="question-2 w-75 mx-auto margin-top">
-            <h1 class="display-1 text-center">What is your name?</h1>
-            <input type="text" class="form-control w-50 mx-auto mt-4" placeholder="Name">
+        <div class="question-2 container mt-5">
+            <div class="d-flex justify-content-center row">
+                <div class="col-md-10 col-lg-10">
+                    <div class="border">
+                        <div class="question bg-white p-3 border-bottom">
+                            <div class="d-flex flex-row justify-content-between align-items-center mcq">
+                                <h4>MCQ Quiz</h4><span>(2 of 5)</span>
+                            </div>
+                        </div>
 
-            <div class="text-center">
-                <button class="mt-4 btn btn-primary btn-lg question-2-next">Next</button>
+                        <div class="question bg-white p-3 border-bottom">
+                            <div class="d-flex flex-row align-items-center question-title ms-4">
+                                <h3 class="text-danger">Q.</h3>
+                                <h5 class="mt-1 me-2">
+                                    What is your name?
+                                </h5>
+                            </div>
+
+                            <div class="ans ms-2">
+                                <input type="text" class="form-control w-50 me-auto my-4" placeholder="Name">
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
+                            <button class="btn btn-primary d-flex align-items-center btn-danger" type="button"
+                                id="q2-pre">
+                                <i class="fa fa-angle-left mt-1 mr-1"></i>&nbsp;previous
+                            </button>
+
+                            <button class="btn btn-primary border-success align-items-center btn-success" type="button"
+                                id="q2-next">Next<i class="fa fa-angle-right ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- question-3 -->
-        <div class="question-3 w-75 mx-auto margin-top">
-            <h1 class="display-3 text-center">Do you feel proud to be a member of the XX primary school community?</h1>
+        <div class="question-3 container mt-5">
+            <div class="d-flex justify-content-center row">
+                <div class="col-md-10 col-lg-10">
+                    <div class="border">
+                        <div class="question bg-white p-3 border-bottom">
+                            <div class="d-flex flex-row justify-content-between align-items-center mcq">
+                                <h4>MCQ Quiz</h4><span>(3 of 5)</span>
+                            </div>
+                        </div>
 
-            <div class="mt-4 d-flex justify-content-between w-50 mx-auto fs-4">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="feelProud" id="yes">
-                    <label class="form-check-label" for="yes">
-                        Yes
-                    </label>
+                        <div class="question bg-white p-3 border-bottom">
+                            <div class="d-flex flex-row align-items-center question-title ms-4">
+                                <h3 class="text-danger">Q.</h3>
+                                <h5 class="mt-1 ms-2">Do you feel proud to be a member of the XX primary school
+                                    community?</h5>
+                            </div>
+
+                            <div class="ms-2 my-4">
+                                <div class="ans ms-5">
+                                    <label class="radio">
+                                        <input type="radio" name="feelProud" value="yes">
+                                        <span>Yes</span>
+                                    </label>
+                                </div>
+
+                                <div class="ans ms-5">
+                                    <label class="radio">
+                                        <input type="radio" name="feelProud" value="no">
+                                        <span>No</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
+                            <button class="btn btn-primary d-flex align-items-center btn-danger" type="button"
+                                id="q3-pre">
+                                <i class="fa fa-angle-left mt-1 mr-1"></i>&nbsp;previous
+                            </button>
+
+                            <button class="btn btn-primary border-success align-items-center btn-success" type="button"
+                                id="q3-next">Next<i class="fa fa-angle-right ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="feelProud" id="no">
-                    <label class="form-check-label" for="no">
-                        No
-                    </label>
-                </div>
-            </div>
-
-            <div class="text-center">
-                <button class="mt-4 btn btn-primary btn-lg question-3-next">Next</button>
             </div>
         </div>
 
         <!-- question-4 -->
-        <div class="question-4 w-100 container mx-auto margin-top">
-            <h1 class="display-1 text-center">Do you have friends?</h1>
+        <div class="question-4 container mt-5">
+            <div class="d-flex justify-content-center row">
+                <div class="col-md-10 col-lg-10">
+                    <div class="border">
+                        <div class="question bg-white p-3 border-bottom">
+                            <div class="d-flex flex-row justify-content-between align-items-center mcq">
+                                <h4>MCQ Quiz</h4><span>(4 of 5)</span>
+                            </div>
+                        </div>
 
-            <div class="mt-4 d-flex justify-content-between w-100 mx-auto fs-4">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="haveFriends" id="i-have-lots-of-good-friends">
-                    <label class="form-check-label" for="i-have-lots-of-good-friends">
-                        I have lots of good friends
-                    </label>
+                        <div class="question bg-white p-3 border-bottom">
+                            <div class="d-flex flex-row align-items-center question-title ms-4">
+                                <h3 class="text-danger">Q.</h3>
+                                <h5 class="mt-1 ms-2">Do you have friends?</h5>
+                            </div>
+
+                            <div class="ms-2 my-4 ans-container">
+                                <div class="ans ms-5">
+                                    <label class="radio">
+                                        <input type="radio" name="haveFriends" value="I have lots of good friends">
+                                        <span style="width: 300px;">I have lots of good friends</span>
+                                    </label>
+                                </div>
+
+                                <div class="ans ms-5">
+                                    <label class="radio">
+                                        <input type="radio" name="haveFriends" value="I have a few good friends">
+                                        <span style="width: 300px;">I have a few good friends</span>
+                                    </label>
+                                </div>
+
+                                <div class="ans ms-5">
+                                    <label class="radio">
+                                        <input type="radio" name="haveFriends" value="I have a few friends">
+                                        <span style="width: 300px;">I have a few friends</span>
+                                    </label>
+                                </div>
+
+                                <div class="ans ms-5">
+                                    <label class="radio">
+                                        <input type="radio" name="haveFriends" value="I don’t have any friends">
+                                        <span style="width: 300px;">I don’t have any friends</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
+                            <button class="btn btn-primary d-flex align-items-center btn-danger" type="button"
+                                id="q4-pre">
+                                <i class="fa fa-angle-left mt-1 mr-1"></i>&nbsp;previous
+                            </button>
+
+                            <button class="btn btn-primary border-success align-items-center btn-success" type="button"
+                                id="q4-next">Next<i class="fa fa-angle-right ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="haveFriends" id="i-have-a-few-good-friends">
-                    <label class="form-check-label" for="i-have-a-few-good-friends">
-                        I have a few good friends
-                    </label>
-                </div>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="haveFriends" id="i-have-a-few-friends">
-                    <label class="form-check-label" for="i-have-a-few-friends">
-                        I have a few friends
-                    </label>
-                </div>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="haveFriends" id="i-don’t-have-any-friends">
-                    <label class="form-check-label" for="i-don’t-have-any-friends">
-                        I don’t have any friends
-                    </label>
-                </div>
-            </div>
-
-            <div class="text-center">
-                <button class="mt-4 btn btn-primary btn-lg question-4-next">Next</button>
             </div>
         </div>
 
         <!-- question-5 -->
-        <div class="question-5 w-100 container mx-auto margin-top">
-            <h1 class="display-1 text-center">Can you make choices easily?</h1>
+        <div class="question-5 container mt-5">
+            <div class="d-flex justify-content-center row">
+                <div class="col-md-10 col-lg-10">
+                    <div class="border">
+                        <div class="question bg-white p-3 border-bottom">
+                            <div class="d-flex flex-row justify-content-between align-items-center mcq">
+                                <h4>MCQ Quiz</h4><span>(5 of 5)</span>
+                            </div>
+                        </div>
 
-            <div class="mt-4 d-flex justify-content-between w-100 mx-auto fs-4">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="choices-easily" id="i-can-make-choices-easily">
-                    <label class="form-check-label" for="i-can-make-choices-easily">
-                        I can make choices easily
-                    </label>
+                        <div class="question bg-white p-3 border-bottom">
+                            <div class="d-flex flex-row align-items-center question-title ms-4">
+                                <h3 class="text-danger">Q.</h3>
+                                <h5 class="mt-1 ms-2">Can you make choices easily?</h5>
+                            </div>
+
+                            <div class="ms-2 my-4 ans-container">
+                                <div class="ans ms-5">
+                                    <label class="radio">
+                                        <input type="radio" name="choices-easily" value="I can make choices easily">
+                                        <span style="width: 340px">
+                                            I can make choices easily
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <div class="ans ms-5">
+                                    <label class="radio">
+                                        <input type="radio" name="choices-easily"
+                                            value="I can usually make choices easily">
+                                        <span style="width: 340px">
+                                            I can usually make choices easily
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <div class="ans ms-5">
+                                    <label class="radio">
+                                        <input type="radio" name="choices-easily"
+                                            value="I sometimes struggle to make choices">
+                                        <span style="width: 340px">
+                                            I sometimes struggle to make choices
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <div class="ans ms-5">
+                                    <label class="radio">
+                                        <input type="radio" name="choices-easily" value="I struggle to make choices">
+                                        <span style="width: 340px">
+                                            I struggle to make choices
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
+                            <button class="btn btn-primary d-flex align-items-center btn-danger" type="button"
+                                id="q5-pre">
+                                <i class="fa fa-angle-left mt-1 mr-1"></i>&nbsp;previous
+                            </button>
+
+                            <button class="btn btn-primary border-success align-items-center btn-success" type="button"
+                                id="q5-next">Submit<i class="fa fa-angle-right ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="choices-easily"
-                        id="i-can-usually-make-choices-easily">
-                    <label class="form-check-label" for="i-can-usually-make-choices-easily">
-                        I can usually make choices easily
-                    </label>
-                </div>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="choices-easily"
-                        id="i-sometimes-struggle-to-make-choices">
-                    <label class="form-check-label" for="i-sometimes-struggle-to-make-choices">
-                        I sometimes struggle to make choices
-                    </label>
-                </div>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="choices-easily" id="i-struggle-to-make-choices">
-                    <label class="form-check-label" for="i-struggle-to-make-choices">
-                        I struggle to make choices
-                    </label>
-                </div>
-            </div>
-
-            <div class="text-center">
-                <button class="mt-4 btn btn-primary btn-lg question-5-next">Next</button>
             </div>
         </div>
-
-        <!-- Submit -->
-        <div class="submit w-100 container mx-auto margin-top">
-            <div class="text-center">
-                <button class="btn btn-primary btn-lg submit-btn">Submit</button>
-            </div>
-        </div>
-
     </main>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
